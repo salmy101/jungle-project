@@ -7,14 +7,17 @@
     <br>
     <p><%= product.description %></p>
   </td>
-  <td>
-  <span><%= humanized_money_with_symbol product.price %></span>
-  </td>
+
   <td>
     <div>
     <%= quantity %>
     </div>
   </td>
+  
+  <td>
+  <span><%= humanized_money_with_symbol product.price %></span>
+  </td>
+  
   <td>
   <span><%= humanized_money_with_symbol product.price * quantity %></span>
   </td>
