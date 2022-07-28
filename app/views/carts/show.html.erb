@@ -27,7 +27,6 @@
             TOTAL:
           </th>
           <th>
-
             <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
           </th>
         </tr>
@@ -54,7 +53,7 @@
 
   <% else %>
   <h1>The cart is empty </h1>
-  <a href = "/">Visit home to start shopping</a>
+  <%= link_to "Begin Shopping", root_path, class: 'btn btn-lg btn-primary' %>
   <% end %>
 
 </section>
