@@ -11,6 +11,34 @@
 </head>
 <body>
 
+
+<%# ----- add these lines here: ----- %>
+	
+<% if current_user %>
+  <!-- current_user will return true if a user is logged in -->
+  <%= "Logged in as #{current_user.email}" %> | <%= link_to 'Home', root_path %> | <%= link_to 'Log Out', logout_path %>
+<% else %>
+  <!-- not logged in -->
+  <%= link_to 'Home', root_path %> | <%= link_to 'Log In', login_path %> or <%= link_to 'Sign Up', 'users#new' %>
+<% end %>
+<hr>
+
+
+
+
+<%# ----- add these lines here: ----- %>
+	
+	<% if notice %>
+      <%= notice %>
+	<% end %>
+	
+	<% if alert %>
+      <%= alert %>
+	<% end %>
+	
+	<%# ----- end of added lines ----- %>
+	
+
   <%= render 'layouts/top_nav' %>
 
   <main class="container">
